@@ -1,7 +1,3 @@
-// Java program to implement
-// a Simple Registration Form
-// using Java Swing
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -9,7 +5,6 @@ import java.awt.event.*;
 class MyFrame
     extends JFrame
     implements ActionListener {
-
         public static void main(String[] args) {
             EventQueue.invokeLater(new Runnable() {
                 public void run() {
@@ -19,7 +14,6 @@ class MyFrame
                     });
         }
 
-    // Components of the Form
     private Container c;
     private JLabel title;
     private JLabel title2;
@@ -51,10 +45,6 @@ class MyFrame
         = { "เลือกความรู้ความสามารถ", "ASP : Web_ASP", "C++ : C++", "DB2 : Database Administrator, DB2", "DBA_OR : Database Administrator, ORACLE", "GRP_DS : Graphic Design", "JAVA :  JAVA", "MGT : Management", "NW : Network", "SE_45 : Secretarial work, 45 words/min", "SE_60 : Secretarial work, 60 words/min", "SYS_1 : System Analyst, Level 1", "SYS_2 : System Analyst, Level 2", "VB : Visual Basic"};
     private String want[]
         = { "เลือกตำแหน่งที่ต้องการสมัคร", "PS001 : Technical Programmer", "PS002 : Web Developer", "PS003 : General Manager", "PS004 : ICT Specialist", "PS005 : E-Business Analyst", "PS006 : ICT Document", "PS007 : Database Administrator", "PS008 : PC Administrator", "PS009 : Network Specialist", "PS010 : ICT Manager"};
-
-    // constructor, to initialize the components
-    // with default values.
-
 
     public MyFrame()
     {
@@ -250,8 +240,8 @@ class MyFrame
 		comboBox5.setSize(300,20);
 		panel_2.add(comboBox5);
 
-        JPanel panel3 = new JPanel();// L , N , R , B
-		panel3.setBounds(10, 555, 700, 150); //385, 657, 184
+        JPanel panel3 = new JPanel();
+		panel3.setBounds(10, 555, 700, 150);
 		c.add(panel3);
 		panel3.setLayout(null);
         panel3.setBackground(Color.WHITE);
@@ -319,10 +309,7 @@ class MyFrame
 
 
         setVisible(true);
-    }  
-    // method actionPerformed()
-    // to get the action performed
-    // by the user and act accordingly
+    }
     public void actionPerformed(ActionEvent e)
     {
         if (e.getSource() == sub) {

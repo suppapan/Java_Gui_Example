@@ -14,13 +14,11 @@ public class MyFrame2
                     });
         }
 
-    // Components of the Form
     private Container c;
     private JLabel title;
     private JButton sub;
     public JTextArea tout;
-    // constructor, to initialize the components
-    // with default values.
+
     public MyFrame2()
     {
         setTitle("Stou-TEC");
