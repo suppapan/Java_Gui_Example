@@ -66,11 +66,13 @@ class MyFrame
         Font font = new Font("SF Mono" , Font.BOLD , 14);
         c = getContentPane();
         c.setLayout(null);
+        c.setBackground(Color.WHITE);
         
         JPanel panel = new JPanel();
 		panel.setBounds(288, 10, 410, 115);
 		c.add(panel);
 		panel.setLayout(new GridLayout(0, 1, 0, 0));
+        panel.setBackground(Color.WHITE);
 
         title = new JLabel("บริษัท STOU-TEC");
         title.setFont(new Font("TH Sarabun New", Font.PLAIN, 20));
@@ -186,6 +188,7 @@ class MyFrame
 		panel_2.setBounds(10, 385, 657, 154);
 		c.add(panel_2);
 		panel_2.setLayout(null);
+        panel_2.setBackground(Color.WHITE);
 
         JLabel lblNewLabel = new JLabel("ความรู้ความสามารถหรือคุณสมบัติเฉพาะตำแหน่ง (QUAL_DESC)(ตอบได้ไม่เกิน 5 รายการ)");
 		lblNewLabel.setBounds(12, 5, 582, 17);
@@ -251,6 +254,7 @@ class MyFrame
 		panel3.setBounds(10, 555, 700, 150); //385, 657, 184
 		c.add(panel3);
 		panel3.setLayout(null);
+        panel3.setBackground(Color.WHITE);
 
         JLabel Label2 = new JLabel("ตำแหน่งที่ต้องการสมัคร (POS_NAME) :  (ตอบได้ไม่เกิน 3 ตำแหน่ง)");
         Label2.setSize(300,20);
@@ -322,9 +326,6 @@ class MyFrame
     public void actionPerformed(ActionEvent e)
     {
         if (e.getSource() == sub) {
-                String str = tid.getText();
-                MyFrame2 obj = new MyFrame2();
-                obj.setID(str);
                 String data1;
                 String data
                     = "เลขประจำตัวผู้สมัคร : "
@@ -364,10 +365,9 @@ class MyFrame
                     + "ตำแหน่งที่ต้องการสมัคร3 : "
                     + (String)combo3.getSelectedItem().toString() + "\n"
                     + "\n";
-                tout.setText(data + data1 + data2 );
                 tout.setEditable(false);
-                res.setText("Registration Successfully..");
                 MyFrame2 frame2 = new MyFrame2();
+                frame2.tout.setText(data + data1 + data2 );
                 frame2.setVisible(true);
                 setVisible(false);
         }

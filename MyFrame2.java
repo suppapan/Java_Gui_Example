@@ -18,14 +18,7 @@ public class MyFrame2
     private Container c;
     private JLabel title;
     private JButton sub;
-    private JTextArea tout;
-    private JLabel Tid;
-    private JPanel contentPane;
-    
-    public void setID(String str){
-        Tid.setText(str);
-        System.out.println(Tid.getText().toString());
-    }
+    public JTextArea tout;
     // constructor, to initialize the components
     // with default values.
     public MyFrame2()
@@ -33,11 +26,13 @@ public class MyFrame2
         setTitle("Stou-TEC");
         setBounds(240,0, 1000, 820);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+        
         setResizable(false);
         
-        Font font = new Font("SF Mono" , Font.BOLD , 14);
+        Font font = new Font("SF Mono" , Font.BOLD , 20);
         c = getContentPane();
         c.setLayout(null);
+        c.setBackground(Color.WHITE);
 
         JPanel panel = new JPanel();
 		panel.setBounds(288, 10, 410, 115);
@@ -49,15 +44,8 @@ public class MyFrame2
         title.setSize(300, 30);
         title.setHorizontalAlignment(SwingConstants.CENTER);
         panel.add(title);
+        panel.setBackground(Color.WHITE);
 
-        setBounds(100, 100, 350, 200);
-		contentPane = new JPanel();
-		setContentPane(contentPane);
-		contentPane.setLayout(null);
-
-        Tid = new JLabel();
-        Tid.setBounds(100, 38, 93, 14);
-        contentPane.add(Tid);
 
         sub = new JButton("แก้ไข");
         sub.setFont(font);
@@ -68,14 +56,12 @@ public class MyFrame2
         c.add(sub);
 
         tout = new JTextArea();
-        tout.setFont(new Font("Arial", Font.PLAIN, 15));
-        tout.setSize(500, 500);
-        tout.setLocation(100, 200);
+        tout.setFont(font);
+        tout.setSize(600, 600);
+        tout.setLocation(160, 120);
         tout.setLineWrap(true);
         tout.setEditable(false);
         c.add(tout);
-
-        
 
         setVisible(true);
     }
